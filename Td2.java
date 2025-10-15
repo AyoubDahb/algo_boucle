@@ -1,5 +1,6 @@
 
 import java.util.Scanner;
+import java.lang.Math;
 
 public class Td2 {
 
@@ -75,17 +76,16 @@ public class Td2 {
         int n1 = sc.nextInt();
         int n2 = sc.nextInt();
         int add = 0;
-        int n3 = 0;
         int nb = 0;
-        while (add < n1) {
+        while (add +n2 <= n1) {
 
             add = add + n2;
-            n3 = n2 + n2;
+           
             nb++;
 
         }
         int quotien = nb;
-        int reste = n1 - n3;
+        int reste = n1 - add;
         System.out.println("quotien : " + quotien + "reste : " + reste);
     }
 
@@ -166,19 +166,79 @@ public class Td2 {
      * L'exercice 7
      */
 
-    static void exo7() {
+   static void exo7() {
+    System.out.print("Entrez le nombre de termes: ");
+    int n = sc.nextInt();
+    double pi = 0;
+    double signe = 1; 
+    
+    for (int i = 0; i < n; i++) {
+        pi += signe / (2.0 * i + 1);  
+        signe = -signe; 
+    }
+    
+    pi = pi * 4;  
+    System.out.println("Approximation de PI avec " + n + " termes: " + pi);
+}
 
-        int n = sc.nextInt();
-        double pi =1;
 
-        for (int i=1; i <n;i+=6){
+ /**
+     * L'exercice 8
+     */
 
-            pi = pi- (1/i+2) + (1/i+4);
+   static void exo8() {
 
-        }
-       pi = pi*4;
-                System.out.println("resultat : " + pi);
-
+    System.out.print("Entrez le nombre de termes: ");
+    int n = sc.nextInt();
+    double ex = 0;
+     ex = 1 + n ;    
+    for (int i = 2; i < n; i++) {
+        ex += (Math.pow(n,i)(i/i!));  
         
     }
+    
+     
+    System.out.println("Approximation de E avec " + n + " termes: " + ex);
+    
+}
+
+ /**
+     * L'exercice 9
+     */
+
+   static void exo9() {
+    
+}
+
+ /**
+     * L'exercice 10 
+     */
+
+   static void exo10() {
+    
+}
+
+ /**
+     * L'exercice 11
+     */
+
+   static void exo11() {
+    
+}
+
+ /**
+     * L'exercice 12
+     */
+
+   static void exo12() {
+    
+}
+
+ /**
+     * L'exercice 13
+     */
+
+   static void exo13() {
+    
+}
 }
